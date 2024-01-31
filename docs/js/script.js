@@ -1,11 +1,11 @@
 function searchCEP() {
 
     const timeOutMilliSeconds = 300;
-    const timeOutPromise = new Promise((resolve) => setTimeout(resolve, timeoutMilliseconds));
+    const timeOutPromise = new Promise((resolve) => setTimeout(resolve, timeOutMilliSeconds));
 
     document.getElementById('spinner').style.display = 'block';
     var cep = document.getElementById('field_searchCEP').value;
-    var apiUrl = 'https://viacep.com.br/ws/consulta-cep/' + cep + '/json';
+    var apiUrl = 'https://viacep.com.br/ws/' + cep + '/json';
 
     fetch(apiUrl)
         .then(response => response.json())
