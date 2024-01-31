@@ -5,7 +5,7 @@ function searchCEP() {
 
     document.getElementById('spinner').style.display = 'block';
     var cep = document.getElementById('field_searchCEP').value;
-    var apiUrl = 'https://viacep.com.br/ws/consulta-cep/' + cep;
+    var apiUrl = 'https://viacep.com.br/ws/consulta-cep/' + cep + '/json';
 
     fetch(apiUrl)
         .then(response => response.json())
@@ -17,7 +17,7 @@ function searchCEP() {
 }
 
 function cleanCEP() {
-    var cep = document.getElementById('field_searchCEP').value("");    
+    document.getElementById('field_searchCEP').value = "";
 }
 
 function exibirResultado(result) {
