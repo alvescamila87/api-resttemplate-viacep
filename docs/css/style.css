@@ -1,31 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@keyframes spinner-d3wgkg {
+    to {
+       transform: rotate(1turn);
+    }
+ }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
 }
 
-.box-result {
-    display: flex;
-    justify-content: center;
+header {    
+    background-color: darkgrey; 
+    font-weight: bolder;
+    text-transform: uppercase;
+    height: 100px;
+    text-align: center; 
+    margin: 0; 
+    padding: 15px 0;  
 }
 
-#cepInput {
+main {
+    text-align: center; 
+    margin: 50px 0 0;
+}
+
+
+label {
+    padding: 0 3px;
+    font-weight: bolder;
+}
+
+
+#field_searchCEP {
     padding: 10px 40px;
     font-size: 16px;
-
-}
-
-#result {
-    margin-top: 20px;
-    text-align: left;
 }
 
 button {
     margin: 20px;
     padding: 10px;
-    font-size: 18px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.box-result {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#result {
+    margin-top: 20px;
+    text-align: left;
 }
 
 .box-spinner {
@@ -46,8 +77,14 @@ button {
     animation: spinner-d3wgkg 1s infinite linear;
  }
 
- @keyframes spinner-d3wgkg {
-    to {
-       transform: rotate(1turn);
-    }
- }
+footer {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;    
+    background-color: lightgray;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;    
+}
+

@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Consultar CEP</title>
+    <title>Consulta CEP</title>
 </head>
 <body>
-<main class="container-principal">
-    <h2>Consulta CEP</h2>
-    <input type="text" id="cepInput" placeholder="Digite o CEP"><br>
-    <button onclick="consultarCEP()">Consultar</button>
-</main>
+    <header>
+        <h1>Website CEP do Brasil</h1>
+    </header>
+    <main class="container-principal">
+        <h2>
+            Pesquisar CEP
+        </h2>
+        
+        <label for="field_searchCEP">CEP</label>
+        <input type="text" name="field_searchCEP" id="field_searchCEP" placeholder="Digite o CEP, sem hífen (-)">    
+        
+        <button type="button" onclick="searchCEP()">Pesquisar</button>
+        <button type="button" onclick="cleanCEP()">Limpar pesquisa</button>
 
-<div class="box-spinner">
-    <div id="spinner"></div>
-</div>
+        <div class="box-spinner">
+            <div id="spinner"></div>
+        </div>
 
-
-<div class="box-result">
-
-    <div id="result"></div>
-</div>
-
-<script src="js/script.js"></script>
+        <div class="box-result">
+            <div id="result"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido no projeto Entra21</p>
+        <p>Colaboração: Camila e Yan <a href="https://github.com/yanhausmann">git</a></p>
+        <p>Copyright: &copy; 2024</p>
+    </footer>    
 </body>
+<script src="js/script.js"></script>
 </html>

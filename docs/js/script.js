@@ -1,10 +1,11 @@
-function consultarCEP() {
-    const timeoutMilliseconds = 300;
-    const timeoutPromise = new Promise((resolve) => setTimeout(resolve, timeoutMilliseconds));
+function searchCEP() {
+
+    const timeOutMilliSeconds = 300;
+    const timeOutPromise = new Promise((resolve) => setTimeout(resolve, timeoutMilliseconds));
 
     document.getElementById('spinner').style.display = 'block';
-    var cep = document.getElementById('cepInput').value;
-    var apiUrl = 'http://localhost:8080/consulta-cep/' + cep;
+    var cep = document.getElementById('field_searchCEP').value;
+    var apiUrl = 'https://viacep.com.br/ws/consulta-cep/' + cep;
 
     fetch(apiUrl)
         .then(response => response.json())
@@ -15,9 +16,14 @@ function consultarCEP() {
         });
 }
 
+function cleanCEP() {
+    var cep = document.getElementById('field_searchCEP').value("");    
+}
+
 function exibirResultado(result) {
     var resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = '<h3>Resultado:</h3>';
+    
+    resultDiv.innerHTML = '<h3>Resultado de localização do CEP:</h3>';
     resultDiv.innerHTML += '<p>CEP: ' + result.cep + '</p>';
     resultDiv.innerHTML += '<p>Logradouro: ' + result.logradouro + '</p>';
     resultDiv.innerHTML += '<p>Complemento: ' + result.complemento + '<p/>';
