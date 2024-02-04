@@ -6,29 +6,41 @@
     }
  }
 
+ @media (max-width: 992px) {}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: normal;
 
     margin: 0;
+    background-color: #f8f9fa;
 }
 
 header {    
-    background-color: darkgrey; 
+    background-color: #adb5bd;
     font-weight: bolder;
     text-transform: uppercase;
-    height: 100px;
+    height: 200px;
     text-align: center; 
     margin: 0; 
     padding: 15px 0;  
+}
+
+h1 {
+    margin-top: 55px;
+
+}
+
+h3 {
+    margin-top: 55px;
+    margin-bottom: 25px
 }
 
 main {
     text-align: center; 
     margin: 50px 0 0;
 }
-
 
 label {
     padding: 0 3px;
@@ -51,7 +63,6 @@ button {
 .box-result {
     display: flex;
     justify-content: center;
-    
 }
 
 #result {
@@ -81,10 +92,10 @@ footer {
     font-size: small;
     font-weight: bold;
     text-align: center;    
-    background-color: lightgray;
+    background-color: #e9ecef;
     position: fixed;
     width: 100%;
     bottom: 0;
-    padding: 20px;    
+    padding: 10px;
 }
 
