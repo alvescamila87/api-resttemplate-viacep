@@ -23,7 +23,7 @@ function cleanCEP() {
 function exibirResultado(result) {
     var resultDiv = document.getElementById('result');
     
-    resultDiv.innerHTML = '<h3>Resultado de localização do CEP:</h3>';
+    resultDiv.innerHTML = '<h4>Resultado de localização do CEP:</h4>';
     resultDiv.innerHTML += '<p>CEP: ' + result.cep + '</p>';
     resultDiv.innerHTML += '<p>Logradouro: ' + result.logradouro + '</p>';
     resultDiv.innerHTML += '<p>Complemento: ' + result.complemento + '<p/>';
